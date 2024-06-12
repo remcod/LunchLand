@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <!-- Vereiste meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lunch Land</title>
+
+    <!-- Material.io bestanden (CSS & Font/icons)-->
+    <!-- Uitleg werking componenents: https://material.io/components?platform=web -->
+    <!-- Demo van components:         https://material-components.github.io/material-components-web-catalog/#/ -->
+    <!-- Demo en uitleg icons:        https://fonts.google.com/icons?selected=Material+Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="img/icons/icon-512x512.png" type="image/x-icon"/>
+    <style>body{margin: 0;}
+  
+    </style>
+    <script>
+      window.addEventListener("load",()=>{
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("service-worker.js");
+        }
+      })
+  </script>
+    <!-- Material.io bestanden (JS en registratie componenten) -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script>const MDCBanner = mdc.banner.MDCBanner;const MDCCheckbox = mdc.checkbox.MDCCheckbox;const MDCChip = mdc.chips.MDCChip;const MDCChipSet = mdc.chips.MDCChipSet;const MDCCircularProgress = mdc.circularProgress.MDCCircularProgress;const MDCDataTable = mdc.dataTable.MDCDataTable;const MDCDialog = mdc.dialog.MDCDialog;const MDCDrawer = mdc.drawer.MDCDrawer;const MDCFloatingLabel = mdc.floatingLabel.MDCFloatingLabel;const MDCFormField = mdc.formField.MDCFormField;const MDCIconButtonToggle = mdc.iconButton.MDCIconButtonToggle;const MDCLineRipple = mdc.lineRipple.MDCLineRipple;const MDCLinearProgress = mdc.linearProgress.MDCLinearProgress;const MDCList = mdc.list.MDCList;const MDCMenu = mdc.menu.MDCMenu;const MDCMenuSurface = mdc.menuSurface.MDCMenuSurface;const MDCNotchedOutline = mdc.notchedOutline.MDCNotchedOutline;const MDCRadio = mdc.radio.MDCRadio;const MDCRipple = mdc.ripple.MDCRipple;const MDCSegmentedButton = mdc.segmentedButton.MDCSegmentedButton;const MDCSelect = mdc.select.MDCSelect;const MDCSlider = mdc.slider.MDCSlider;const MDCSnackbar = mdc.snackbar.MDCSnackbar;const MDCSwitch = mdc.switchControl.MDCSwitch;const MDCTabBar = mdc.tabBar.MDCTabBar;const MDCTextField = mdc.textField.MDCTextField;const MDCTooltip = mdc.tooltip.MDCTooltip;const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;</script>
+
+</head>
+
+<body>
+ <!-- HTML web-elementen -->   
+ <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" id="toggle" aria-label="Open navigation menu">menu</button>
+        <span id="title" class="mdc-top-app-bar__title">Lunch Land</span>
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+          <input type="text" id="searchbar" class="hidden" placeholder="Search">
+        <button id="search" class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Search">search</button>
+      </section>
+    </div>
+  </header>
+  <aside class="mdc-drawer mdc-drawer--modal">
+    <div class="mdc-drawer__content">
+      <img src="img/icons/icon-512x512.png" class="asise-img" alt="">
+      <nav class="mdc-list">
+        <a class="mdc-list-item mdc-list-item--activated" id="openFavSheet" href="#" aria-current="page" tabindex="0">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">favorite</i>
+          <span class="mdc-list-item__text">Favorites</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="mdc-drawer-scrim"></div>
+  
+  <main id="main1" class="mdc-top-app-bar--fixed-adjust">
+    <div class="mdc-tab-bar" role="tablist">
+      <div class="mdc-tab-scroller">
+        <div class="mdc-tab-scroller__scroll-area">
+          <div class="mdc-tab-scroller__scroll-content">
+            <button id="tab1" class="mdc-tab " role="tab" aria-selected="true" tabindex="0">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label">Vegan</span>
+              </span>
+              <span id="tab1" class="mdc-tab-indicator ">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+            <button id="tab2" class="mdc-tab " role="tab" aria-selected="true" tabindex="0">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label">DairyFree</span>
+              </span>
+              <span class="mdc-tab-indicator ">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+            <button id="tab3" class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label">GlutenFree</span>
+              </span>
+              <span class="mdc-tab-indicator ">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+            <button id="tab4" class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label">Vegetarian</span>
+              </span>
+              <span class="mdc-tab-indicator ">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+      </div>
+      </div>
+    </div>
+    </div>
+
+    
+    <ul id="recipeList" class="mdc-image-list mdc-image-list--masonry my-masonry-image-list width90">
+    </ul>
+  </main>
+  <section class="favsheet favsheet-out-of-view">
+    <header class="mdc-top-app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <button id="closeFavSheet" class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Close">close</button>
+          <span class="mdc-top-app-bar__title">Favorites</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+        </section>
+      </div>
+    </header>
+    <main>
+      <ul id="favList" class="mdc-image-list mdc-image-list--masonry my-masonry-image-list width90">
+      </ul>
+    </main>
+
+  </section>
+  <section class="sheet sheet-out-of-view">
+    <header class="mdc-top-app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <button id="closeSheet" class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Close">close</button>
+          <span id="sheettitle" class="mdc-top-app-bar__title">Contextual title</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+          <button id="addtofav" class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite">favorite</button>
+        </section>
+      </div>
+    </header>
+    <main>
+      <img id="sheetimg" src="img/placeholder1.png" alt="">
+      <p id="discription">
+      </p>
+      <button id="nextsheet">Recipe information</button>
+      
+    </main>
+
+  </section>
+
+  <section class="sheet2 sheet2-out-of-view">
+    <header class="mdc-top-app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <button id="closeSheet2" class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Close">close</button>
+          <span id="sheettitle2" class="mdc-top-app-bar__title">Contextual title</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+        </section>
+      </div>
+    </header>
+    <main>
+      <img id="sheetimg2" src="img/placeholder1.png" alt="">
+      <!-- <div class="ingrediantsdiv">
+        <h2>Ingrediants:</h2> -->
+        <div class="mdc-list-group listdiv">
+          <h2 class="mdc-list-group__subheader">Ingrediants:</h2>
+        <ul id="ingrediantslist" class="mdc-list">
+        </ul>
+        <h2 class="mdc-list-group__subheader">Instructions:</h2>
+        <ul id="instructionslist" class="mdc-list">
+        </ul>
+      </div>
+    </main>
+  </section>
+  
+<!-- Vanaf hier custom Javascript-->
+<script src="js/menu.js"></script>
+<script src="js/app.js"></script>
+</body>
+
+</html>

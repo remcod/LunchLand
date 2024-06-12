@@ -1,0 +1,140 @@
+:root{
+    --mdc-theme-primary: #009343;
+}
+.asise-img{
+    width: 100%;
+    text-align: center;
+}
+.mdc-image-list--masonry {
+    column-count: 1
+}
+
+.mdc-image-list__image-aspect-container {
+    padding-bottom: calc(75% / 1);
+}
+.mdc-image-list__image-aspect-containerfav {
+    padding-bottom: calc(80% / 1);
+}
+.mdc-image-list__item{
+    margin-bottom: 30px;
+    border-radius: 12px;
+    background-color: rgb(233, 232, 232);
+}
+.mdc-image-list__image{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding-top: 0;
+}
+.hidden{
+    display: none;
+}
+#discription{
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.bg{
+    background-color: white;
+}
+#searchbar{
+    height: 30px;
+    margin: 2px;
+    font-size: larger;
+    width: 200%;
+    text-align: center;
+}
+#nextsheet{
+    margin-bottom: 56px;
+    width: 150px;
+    height: 35px;
+    background-color: #009343;
+    border: #009343 0;
+    border-radius: 12px;
+    color: white;
+}
+.sheet{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    margin-left: 0;
+    background-color: white;
+    transition: 0.3s ease;
+    min-height: 100vh;
+    height: auto;
+}
+.sheet2{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    margin-left: 0;
+    background-color: white;
+    transition: 0.3s ease;
+    min-height: 100vh;
+    height: auto;
+}
+.favsheet{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    margin-left: 0;
+    background-color: white;
+    transition: 0.3s ease;
+    min-height: 100vh;
+    height: auto;
+}
+.sheet-out-of-view{
+    margin-left: -100%;
+}
+.sheet2-out-of-view{
+    margin-left: -100%;
+}
+.favsheet-out-of-view{
+    margin-left: -100%;
+}
+.sheet main{
+    min-height: calc(100vh - 56px - 48px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sheet img{
+    width: 100%;
+    height: auto;
+    padding-top: 56px;
+}
+.sheet2 main{
+    min-height: calc(100vh - 56px - 48px);
+}
+.sheet2 img{
+    width: 100%;
+    height: auto;
+    padding-top: 56px;
+}
+.favsheet main{
+    min-height: calc(100vh - 56px - 48px);
+    padding-top: 75px;
+}
+.favsheet img{
+    width: 100%;
+    height: auto;
+    /* padding-top: 56px; */
+}
+.mdc-image-list__image{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding-top: 0;
+}
+
+.aligni{
+   justify-content: center;
+}
+.listdiv{
+    margin-bottom: 50px;
+}
+.white{
+    color: white;
+}
+.width90{
+    width: 90%;
+}
+#
